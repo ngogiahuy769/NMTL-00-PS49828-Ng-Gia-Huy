@@ -35,6 +35,9 @@ int main()
         printf("nhap diem khong hop le\n");
     }
 
+   
+    
+    
     float a, b, c, x, Delta, x1, x2;
     printf("nhap vao he so a, b, c: ");
     scanf("%f%f%f", &a, &b, &c);
@@ -76,11 +79,15 @@ int main()
         }
     }
 
-    int kwh;
-    int tiendien;
+   
+
+   
+    
+    float kwh;
+    float tiendien;
 
     printf("Nhap so kWh tieu thu trong thang: ");
-    scanf("%d", &kwh);
+    scanf("%f", &kwh);
 
     if (kwh <= 0)
     {
@@ -88,32 +95,33 @@ int main()
     }
     else if (kwh <= 50)
     {
-        tiendien = kwh * 1678;
+        tiendien = kwh * 1.678;
     }
     else if (kwh <= 100)
     {
-        tiendien = 50 * 1678 + (kwh - 50) * 1734;
+        tiendien = 50 * 1.678 + (kwh - 50) * 1.734;
     }
     else if (kwh <= 200)
     {
-        tiendien = 50 * 1678 + 50 * 1734 + (kwh - 100) * 2014;
+        tiendien = 50 * 1.678 + 50 * 1.734 + (kwh - 100) * 2.014;
     }
     else if (kwh <= 300)
     {
-        tiendien = 50 * 1678 + 50 * 1734 + 100 * 2014 + (kwh - 200) * 2536;
+        tiendien = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + (kwh - 200) * 2.536;
     }
     else if (kwh <= 400)
     {
-        tiendien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (kwh - 300) * 2834;
+        tiendien = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + 100 * 2.536 + (kwh - 300) * 2.834;
     }
     else
     {
-        tiendien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (kwh - 400) * 2927;
+        tiendien = 50 * 1.678 + 50 * 1.734 + 100 * 2.014 + 100 * 2.536 + 100 * 2.834 + (kwh - 400) * 2.927;
     }
 
-    if (kwh >= 0)
+    if (kwh > 0)
     {
-        printf("So tien dien phai tra: %d dong", tiendien);
+        printf("So tien dien phai tra: %.3f dong", tiendien);
     }
+
     return 0;
 }
