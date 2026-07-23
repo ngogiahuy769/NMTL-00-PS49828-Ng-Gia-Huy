@@ -95,21 +95,21 @@ int main()
             break;
 
         case 3:
-            int x;
+            int X;
             int dk = 0;
             printf("Hay nhap 1 so nguyen x: ");
-            scanf("%d", &x);
+            scanf("%d", &X);
 
-            if (x < 0)
+            if (X < 0)
             {
                 printf("Day khong phai la so chinh phuong");
                 return 0;
             }
-            else if (x >= 0)
+            else if (X >= 0)
             {
-                for (int i = 0; i <= x; i++)
+                for (int i = 0; i <= X; i++)
                 {
-                    if (x == i * i)
+                    if (X == i * i)
                     {
                         printf("Day la so chinh phuong");
                         dk++;
